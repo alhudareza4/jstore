@@ -8,7 +8,7 @@
 public class jstore
 {
     // instance variables - replace the example below with your own
-    private int x;
+    
 
     /**
      * Constructor for objects of class jstore
@@ -16,7 +16,7 @@ public class jstore
     public jstore()
     {
         // initialise instance variables
-        x = 0;
+       
     }
 
     /**

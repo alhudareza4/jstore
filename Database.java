@@ -9,6 +9,7 @@ public class Database
 {
     // instance variables - replace the example below with your own
     private String listItem[];
+    private Item item;
 
     /**
      * Constructor for objects of class Database
@@ -25,7 +26,7 @@ public class Database
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void addItem()
+    public boolean addItem()
     {
         // put your code here
     }

@@ -11,19 +11,26 @@
 public class Supplier
 {
     // instance variables - replace the example below with your own
-    protected int id;
-    protected String name;
-    protected String email;
-    protected String phoneNumber;
-    protected String city;
+    private int id;
+    private String name;
+    private String email;
+    private String phoneNumber;
+    // private String city;
+    private Location location;
 
     /**
      * Constructor for objects of class Supplier
      */
-    public Supplier()
+    public Supplier(int id, String name, String email,String phoneNumber,
+    Location location)
     {
         // initialise instance variables
-        id = 0;
+        //id = 0;
+        this.id=id;
+        this.name=name;
+        this.email=email;
+        this.phoneNumber=phoneNumber;
+        this.location=location;
     }
 
     /**
@@ -33,60 +40,73 @@ public class Supplier
     public int getId()
     {
         // put your code here
-        return 0;
+        return id;
     }
     
     public String getName()
     {
         // put your code here
-        return "";
+        return name;
     }
     
     public String getEmail()
     {
         // put your code here
-        return "";
+        return email;
     }
     
     public String getPhoneNumber()
     {
         // put your code here
-        return "";
+        return phoneNumber;
     }
     
-    public String getCity()
-    {
+    //public String getCity()
+    //{
         // put your code here
-        return "";
+    //    return "";
+    //}
+    
+    public Location getLocation()
+    {
+        return location;
     }
     
-    public String setId(int id)
+    public void setId(int id)
     {
         // put your code here
-        return "";
+       
     }
     
-    public String setName(String name)
+    public void setName(String name)
     {
         // put your code here
-        return "";
+        
     }
     
-    public String setEmail(String email)
+    public void setEmail(String email)
     {
         // put your code here
-        return "";
+        
     }
     
-    public String setphoneNumber(String phoneNumber)
+    public void setphoneNumber(String phoneNumber)
     {
         // put your code here
-        return "";
+        
     }
     
-    public String setCity(String city)
-    {
+    //public String setCity(String city)
+    //{
         // put your code here
-        return "";
+    //    return "";
+    //}
+    public void setLocation(Location location)
+    {
+        this.location=location;
+    }
+    public void printData()
+    {
+        System.out.println(name);
     }
 }

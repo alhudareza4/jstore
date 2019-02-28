@@ -5,24 +5,32 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class item
+public class Item
 {
     // instance variables - replace the example below with your own
-    protected int id;
-    protected String name;
-    protected int stock;
-    protected int price;
-    protected String category;
+    private int id;
+    private String name;
+    private int stock;
+    private int price;
+    private String category;
+    private Supplier supplier;
 
     /**
      * Constructor for objects of class item
      */
-    public item()
+    public Item(int id,String name, int stock, int price,
+    String category, Supplier supplier)
     {
         // initialise instance variables
-        id = 0;
-        stock = 0;
-        price = 0;
+        //id = 0;
+        //stock = 0;
+        //price = 0;
+        this.id=id;
+        this.name=name;
+        this.stock=stock;
+        this.price=price;
+        this.category=category;
+        this.supplier=supplier;
        
     }
 
@@ -33,56 +41,72 @@ public class item
     public int getId()
     {
         // put your code here
-        return 0;
+        return id;
     }
     
     public String getName()
     {
         // put your code here
-        return "";
+        return name;
     }
     
     public int getStock()
     {
         // put your code here
-        return 0;
+        return stock;
     }
     
     public int getPrice()
     {
         // put your code here
-        return 0;
+        return price;
     }
     
     public String getCategory()
     {
         // put your code here
-        return "";
+        return category;
     }
-    
-    
-    public String setId(int id)
+    // ini
+    public Supplier getSupplier()
     {
-        return "";
+        // put your code here
+        return supplier;
     }
     
-    public String setName(String name)
+    public void setId(int id)
     {
-        return "";
+        
     }
     
-    public String setStock(int stock)
+    public void setName(String name)
     {
-        return "";
+        
     }
     
-    public String setPrice(int price)
+    public void setStock(int stock)
     {
-        return "";
+        
     }
     
-    public String setCategory(String category)
+    public void setPrice(int price)
     {
-        return "";
+        
     }
+    
+    public void setCategory(String category)
+    {
+        
+    }
+    
+    public void setSupplier(Supplier supplier)
+    {
+        this.supplier=supplier;
+    }
+    
+    public void printData()
+    {
+        System.out.println(name);
+    }
+    
 }
