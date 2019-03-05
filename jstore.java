@@ -19,17 +19,21 @@ public class jstore
        
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public void main(String[] args)
+    
+    public static void main(String[] args)
     {
-        // put your code here
+        Location location=new Location("Serang","banten","Panas");
+        Supplier supplier= new Supplier(1,"reza", "alhuda38@gmail.com","081382777680", location);
+        Item item =new Item(1,"ayam",9,9000,"adult",supplier);
+        Invoice invoice =new Invoice(1,item,"5-3-2019",9000);
+        System.out.println(supplier.getName());
+        supplier.setName("ghifari");
+        System.out.println(supplier.getName());
+        item.printData();
         
     }
+    
+   
     
     
 }

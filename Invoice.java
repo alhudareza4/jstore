@@ -1,28 +1,26 @@
 
 /**
- * Write a description of class Invoice here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * kelas invoice ini berfungsi untuk menset dan mendapatkan 
+ * invoice dari setiap barang dengan yang membedakan dari kelas 
+ * yang lain adalah adanya variable id,date dan total price
+ * @Alhuda Reza Mahara
+ * @version 28 febuari 2019
  */
 public class Invoice
 {
     // instance variables - replace the example below with your own
     private int id;
-    //private int idItem;
     private String date;
     private int totalPrice;
     private Item Item;
 
     /**
-     * Constructor for objects of class Invoice
+     * @param parameter yang digunakan adalah id, Item, date dan totalprice
+     * Constructor yang digunakan pada class invoice berguna untuk mengassign nilai variabel local ke variabel global
      */
     public Invoice(int id, Item Item, String date, int totalPrice)
     {
-        // initialise instance variables
-        //id = 0;
-        //idItem =0;
-        //totalPrice =0;
+
         this.id=id;
         this.Item=Item;
         this.date=date;
@@ -30,8 +28,8 @@ public class Invoice
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
+     * methode yang berguna untuk mengambil nilai id
+     * @return dimana nilai yang sudah diambil tersebut direturn ke variabel id dan menggunakan tipe data integer
      */
     public int getId()
     {
@@ -39,56 +37,71 @@ public class Invoice
         return id;
     }
     
-    //public String getIdItem()
-    //{
-        // put your code here
-    //    return "";
-    //}
-    
+   /**
+     * methode yang berguna untuk mengambil nilai date
+     * @return dimana nilai yang sudah diambil tersebut direturn ke variabel date dan menggunakan tipe data String
+     */
     public String getDate()
     {
         // put your code here
         return date;
     }
-    
+    /**
+     * methode yang berguna untuk mengambil nilai totalPrice
+     * @return dimana nilai yang sudah diambil tersebut direturn ke variabel totalPrice dan menggunakan tipe data integer
+     */
     public int getTotalPrice()
     {
         // put your code here
         return totalPrice;
     }
-    
+    /**
+     * methode yang berguna untuk mengambil nilai Item
+     * @return dimana nilai yang sudah diambil tersebut direturn ke variabel Item 
+     */
     public Item getItem()
     {
         return Item;
     }
-    //public String setItem(int idItem)
-    //{
-        // put your code here
-    //    return "";
-    //}
     
+    /**
+     * methode yang berguna untuk menset nilai id
+     * @param parameter yang digunakan pada method ini adalah id yang menggunakan tipe data integer
+     */
     public void setId(int id)
     {
         // put your code here
         
     }
-    
+    /**
+     * methode yang berguna untuk menset nilai date
+     * @param parameter yang digunakan pada method ini adalah date yang menggunakan tipe data String
+     */
     public void setDate(String date)
     {
         // put your code here
         
     }
-    
+    /**
+     * methode yang berguna untuk menset nilai totalPrice
+     * @param parameter yang digunakan pada method ini adalah totalPrice yang menggunakan tipe data String
+     */
     public void setTotalPrice(String totalPrice)
     {
         // put your code here
         
     }
-    
+    /**
+     * methode yang berguna untuk menset nilai Item
+     * @param parameter yang digunakan pada method ini adalah Item 
+     */
     public void setItem(Item Item)
     {
         this.Item=Item;
     }
+    /**
+     * methode yang berguna untuk menampilkan nila totalprice
+     */
     public void printData()
     {
         System.out.println(totalPrice);

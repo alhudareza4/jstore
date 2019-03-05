@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=DatabaseItem
+comment0.text=\r\n\ class\ databaseitem\ berguna\ untuk\ mendapatkan\ dan\ menset\ database\ item\ dari\r\n\ setiap\ toko.yang\ membedakan\ class\ ini\ dengan\ class\ yang\ lain\ \r\n\ adalah\ adanya\ variable\ listitem\ dan\ Item\r\n\ @author\ Alhuda\ Reza\ Mahara\r\n\ @version\ 28-febuari-2019\r\n
+comment1.params=
+comment1.target=DatabaseItem()
+comment1.text=\r\n\ Constructor\ yang\ digunakan\ pada\ class\ invoice\ berguna\ untuk\ mengassign\ nilai\ variabel\ local\ ke\ variabel\ global\r\n
+comment2.params=Item
+comment2.target=boolean\ addItem(Item)
+comment2.text=\r\n\ methode\ yang\ berguna\ untuk\ menset\ nilai\ item\r\n\ @return\ dimana\ nilai\ yang\ sudah\ diambil\ tersebut\ direturn\ ke\ variabel\ item\r\n\ @param\ parameter\ yang\ digunakan\ pada\ method\ ini\ adalah\ item\ \r\n
+comment3.params=item
+comment3.target=boolean\ removeItem(Item)
+comment3.text=\r\n\ methode\ yang\ berguna\ untuk\ mengambil\ nilai\ supplie\r\n\ @return\ dimana\ nilai\ yang\ sudah\ diambil\ tersebut\ direturn\ ke\ variabel\ \ supplier\ dan\ menggunakan\ tipe\ data\ boolean\r\n\ @param\ parameter\ yang\ digunakan\ pada\ method\ ini\ adalah\ item\ \r\n
+comment4.params=
+comment4.target=java.lang.String[]\ getItemDatabase()
+comment4.text=\r\n\ methode\ yang\ berguna\ untuk\ mengambil\ nilai\ itemdatabase\r\n\ @return\ dimana\ nilai\ yang\ sudah\ diambil\ tersebut\ direturn\ ke\ variabel\ listitem\r\n
+comment5.params=
+comment5.target=Item\ getItem()
+comment5.text=\r\n\ methode\ yang\ berguna\ untuk\ mengambil\ nilai\ item\r\n\ @return\ dimana\ nilai\ yang\ sudah\ diambil\ tersebut\ direturn\ ke\ variabel\ item\r\n
+numComments=6

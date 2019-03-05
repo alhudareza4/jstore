@@ -1,9 +1,11 @@
 
 /**
- * Write a description of class Location here.
+ * class location berguna untuk mendapatkan dan menset lokasi dari
+ * setiap barang.yang membedakan class ini dengan class yang lain 
+ * adalah adanya variable province,description dan city
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Alhuda Reza Mahara
+ * @version 28-febuari-2019
  */
 public class Location
 {
@@ -13,7 +15,8 @@ public class Location
     private String city;
 
     /**
-     * Constructor for objects of class Location
+     * @param parameter yang digunakan adalah city,province,description
+     * Constructor yang digunakan pada class invoice berguna untuk mengassign nilai variabel local ke variabel global
      */
     public Location(String city, String province, String description)
     {
@@ -24,34 +27,56 @@ public class Location
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * methode yang berguna untuk mengambil nilai province
+     * @return dimana nilai yang sudah diambil tersebut direturn ke variabel province dan menggunakan tipe data String
      */
     public String getProvince()
     {
         return province;
     }
-    
+    /**
+     * methode yang berguna untuk mengambil nilai city
+     * @return dimana nilai yang sudah diambil tersebut direturn ke variabel city dan menggunakan tipe data String
+     */
     public String getCity()
     {
         return city;
     }
-    
+    /**
+     * methode yang berguna untuk mengambil nilai description
+     * @return dimana nilai yang sudah diambil tersebut direturn ke variabel description dan menggunakan tipe data String
+     */
     public String getDescription()
     {
         return description;
     }
+    /**
+     * methode yang berguna untuk menset nilai province
+     * @param parameter yang digunakan pada method ini adalah province yang menggunakan tipe data String
+     */
     public void setProvince(String province)
     {
+        
     }
+    /**
+     * methode yang berguna untuk menset nilai city
+     * @param parameter yang digunakan pada method ini adalah city yang menggunakan tipe data String
+     */
     public void setCity(String city)
     {
+        
     }
+    /**
+     * methode yang berguna untuk menset nilai description
+     * @param parameter yang digunakan pada method ini adalah description yang menggunakan tipe data String
+     */
     public void setDescription(String description)
     {
+        
     }
+    /**
+     * methode yang berguna untuk menampilkan nilai province
+     */
     public void printData()
     {
         System.out.println(province);
