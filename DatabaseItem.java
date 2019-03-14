@@ -10,7 +10,7 @@ public class DatabaseItem
 {
     // instance variables - replace the example below with your own
     private String listItem[];
-    private Item Item;
+    public static Item itemDB;
 
     /**
      * Constructor yang digunakan pada class invoice berguna untuk mengassign nilai variabel local ke variabel global
@@ -18,8 +18,7 @@ public class DatabaseItem
     public DatabaseItem()
     {
         // initialise instance variables
-        this.listItem= listItem;
-        this.Item=Item;
+        
        
     }
 
@@ -28,9 +27,10 @@ public class DatabaseItem
      * @return dimana nilai yang sudah diambil tersebut direturn ke variabel item
      * @param parameter yang digunakan pada method ini adalah item 
      */
-    public boolean addItem(Item Item)
+    public static boolean addItem(Item item)
     {
         //return Item;
+        itemDB = item;
         return true;
     }
     /**
@@ -55,9 +55,9 @@ public class DatabaseItem
      * methode yang berguna untuk mengambil nilai item
      * @return dimana nilai yang sudah diambil tersebut direturn ke variabel item
      */
-    public Item getItem()
+    public static Item getItem()
     {
-        return Item;
+        return itemDB;
     }
     
 }

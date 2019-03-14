@@ -1,6 +1,6 @@
 
 /**
- * kelas supplier ini berfungsi untuk menset dan mendapatkan nilai
+. * kelas supplier ini berfungsi untuk menset dan mendapatkan nilai
  * Item dari setiap barang dengan yang membedakan dari kelas 
  * yang lain adalah adanya variable id,name ,stock,price dan category
  * @author Alhuda Reza Mahara
@@ -9,19 +9,22 @@
 public class Item
 {
     // instance variables - replace the example below with your own
+    
+        
     private int id;
     private String name;
     private int stock;
     private int price;
-    private String category;
+    private ItemCategory category;
+    private ItemStatus status;
     private Supplier supplier;
 
     /**
      * @param parameter yang digunakan adalah id, name, stock, price, category, supplier
      * Constructor yang digunakan pada class supplier berguna untuk mengassign nilai variabel local ke variabel global
      */
-    public Item(int id,String name, int stock, int price,
-    String category, Supplier supplier)
+    public Item(int id,String name, int stock, int price,ItemStatus status,
+    ItemCategory category, Supplier supplier)
     {
         this.id=id;
         this.name=name;
@@ -73,7 +76,7 @@ public class Item
      * methode yang berguna untuk mengambil nilai category
      * @return dimana nilai yang sudah diambil tersebut direturn ke variabel category dan menggunakan tipe data String
      */
-    public String getCategory()
+    public ItemCategory getCategory()
     {
         // put your code here
         return category;
@@ -86,6 +89,11 @@ public class Item
     {
         // put your code here
         return supplier;
+    }
+    public ItemStatus getStatus()
+    {
+        // put your code here
+        return status;
     }
     /**
      * methode yang berguna untuk menset nilai id
@@ -123,15 +131,14 @@ public class Item
      * methode yang berguna untuk menset nilai category
      * @param parameter yang digunakan pada method ini adalah category yang menggunakan tipe data String
      */
-    public void setCategory(String category)
+    public void setCategory(ItemCategory category)
     {
         this.category=category;
     }
-    /**
-     * methode yang berguna untuk menset nilai Supplier
-     * @param parameter yang digunakan pada method ini adalah supplier 
-     * dimana pada methode ini berguna untuk mengassign nilai variabel local ke variabel global
-     */
+    public void setStatus(ItemStatus status)
+    {
+        this.status=status;
+    }
     public void setSupplier(Supplier supplier)
     {
         this.supplier=supplier;
@@ -141,7 +148,14 @@ public class Item
      */
     public void printData()
     {
-        System.out.println(name);
+        System.out.println("ITEM");
+        System.out.println("ID" + id);
+        System.out.println("Name" + name);
+        System.out.println("kategory"+ category);
+        System.out.println("Status"+ status);
+        System.out.println("Supplier" + supplier);
+       
+        
     }
     
 }

@@ -13,6 +13,8 @@ public class Invoice
     private String date;
     private int totalPrice;
     private Item Item;
+    private int totalItem;
+    private InvoiceStatus status;
 
     /**
      * @param parameter yang digunakan adalah id, Item, date dan totalprice
@@ -63,7 +65,14 @@ public class Invoice
     {
         return Item;
     }
-    
+    public int getTotalItem()
+    {
+        return 0;
+    }
+    public InvoiceStatus getInvoiceStatus()
+    {
+        return status;
+    }
     /**
      * methode yang berguna untuk menset nilai id
      * @param parameter yang digunakan pada method ini adalah id yang menggunakan tipe data integer
@@ -99,11 +108,24 @@ public class Invoice
     {
         this.Item=Item;
     }
+    public void setTotalItem(int totalItem)
+    {
+        this.Item=Item;
+    }
+     public void setInvoiceStatus(InvoiceStatus status)
+    {
+        this.status=status;
+    }
     /**
      * methode yang berguna untuk menampilkan nila totalprice
      */
     public void printData()
     {
-        System.out.println(totalPrice);
+        System.out.println("INVOICE");
+        System.out.println("ID" + id);
+        System.out.println("TANGGAL" + date);
+        System.out.println("ITEM" + Item.getName());
+        System.out.println("Total Harga" + totalPrice);
+        System.out.println("Status" + status);
     }
 }

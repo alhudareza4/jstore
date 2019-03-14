@@ -132,6 +132,11 @@ public class Supplier
     public void printData()
     {
         //menampilkan variabel name
-        System.out.println(name);
+        System.out.println("SUPPLIER");
+        System.out.println("ID" + id);
+        System.out.println("NAMA" + name);
+        System.out.println("EMAIL" + email);
+        System.out.println("NOMOR TELFON" + phoneNumber);
+        System.out.println("Lokasi" + location.getCity());
     }
 }
