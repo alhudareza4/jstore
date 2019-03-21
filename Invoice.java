@@ -6,27 +6,31 @@
  * @Alhuda Reza Mahara
  * @version 28 febuari 2019
  */
-public class Invoice
+public abstract class Invoice
 {
     // instance variables - replace the example below with your own
     private int id;
     private String date;
-    private int totalPrice;
+    protected int totalPrice;
     private Item Item;
     private int totalItem;
     private InvoiceStatus status;
+    private InvoiceType type;
+    
+    
 
     /**
      * @param parameter yang digunakan adalah id, Item, date dan totalprice
      * Constructor yang digunakan pada class invoice berguna untuk mengassign nilai variabel local ke variabel global
      */
-    public Invoice(int id, Item Item, String date, int totalPrice)
+    public Invoice(int id, Item Item, String date, int totalItem,int totalPrice)
     {
 
         this.id=id;
         this.Item=Item;
         this.date=date;
         this.totalPrice=totalPrice;
+        this.totalItem=totalItem;
     }
 
     /**
@@ -69,9 +73,15 @@ public class Invoice
     {
         return 0;
     }
+    
+    
     public InvoiceStatus getInvoiceStatus()
     {
         return status;
+    }
+    public InvoiceType getInvoicetype()
+    {
+        return type;
     }
     /**
      * methode yang berguna untuk menset nilai id
@@ -95,7 +105,7 @@ public class Invoice
      * methode yang berguna untuk menset nilai totalPrice
      * @param parameter yang digunakan pada method ini adalah totalPrice yang menggunakan tipe data String
      */
-    public void setTotalPrice(String totalPrice)
+    public void setTotalPrice(int totalPrice)
     {
         // put your code here
         
@@ -119,13 +129,8 @@ public class Invoice
     /**
      * methode yang berguna untuk menampilkan nila totalprice
      */
-    public void printData()
-    {
-        System.out.println("INVOICE");
-        System.out.println("ID" + id);
-        System.out.println("TANGGAL" + date);
-        System.out.println("ITEM" + Item.getName());
-        System.out.println("Total Harga" + totalPrice);
-        System.out.println("Status" + status);
-    }
+    public abstract void printData();
+    
+       
+    
 }
