@@ -1,4 +1,8 @@
 
+
+
+
+
 /**
  * kelas invoice ini berfungsi untuk menset dan mendapatkan 
  * invoice dari setiap barang dengan yang membedakan dari kelas 
@@ -6,11 +10,12 @@
  * @Alhuda Reza Mahara
  * @version 28 febuari 2019
  */
+import java.util.*;
 public abstract class Invoice
 {
     // instance variables - replace the example below with your own
     private int id;
-    private String date;
+    private Calendar date;
     protected int totalPrice;
     private Item Item;
     private int totalItem;
@@ -23,14 +28,13 @@ public abstract class Invoice
      * @param parameter yang digunakan adalah id, Item, date dan totalprice
      * Constructor yang digunakan pada class invoice berguna untuk mengassign nilai variabel local ke variabel global
      */
-    public Invoice(int id, Item Item, String date, int totalItem,int totalPrice)
+     public Invoice(int id, Item item, int totalItem)
     {
-
-        this.id=id;
-        this.Item=Item;
-        this.date=date;
-        this.totalPrice=totalPrice;
-        this.totalItem=totalItem;
+        this.id = id;
+        this.Item = item;
+        this.totalItem = totalItem;
+        this.setTotalPrice(item.getPrice() * this.getTotalItem());
+        this.date = new GregorianCalendar();
     }
 
     /**
@@ -47,7 +51,7 @@ public abstract class Invoice
      * methode yang berguna untuk mengambil nilai date
      * @return dimana nilai yang sudah diambil tersebut direturn ke variabel date dan menggunakan tipe data String
      */
-    public String getDate()
+    public Calendar getDate()
     {
         // put your code here
         return date;
@@ -71,7 +75,7 @@ public abstract class Invoice
     }
     public int getTotalItem()
     {
-        return 0;
+        return totalItem;
     }
     
     
@@ -90,16 +94,16 @@ public abstract class Invoice
     public void setId(int id)
     {
         // put your code here
-        
+         this.id = id;
     }
     /**
      * methode yang berguna untuk menset nilai date
      * @param parameter yang digunakan pada method ini adalah date yang menggunakan tipe data String
      */
-    public void setDate(String date)
+    public void setDate(Calendar date)
     {
         // put your code here
-        
+         this.date = date;
     }
     /**
      * methode yang berguna untuk menset nilai totalPrice
@@ -108,7 +112,7 @@ public abstract class Invoice
     public void setTotalPrice(int totalPrice)
     {
         // put your code here
-        
+        this.totalPrice = totalPrice;
     }
     /**
      * methode yang berguna untuk menset nilai Item
@@ -120,7 +124,7 @@ public abstract class Invoice
     }
     public void setTotalItem(int totalItem)
     {
-        this.Item=Item;
+        this.totalItem=totalItem;
     }
      public void setInvoiceStatus(InvoiceStatus status)
     {
@@ -130,6 +134,10 @@ public abstract class Invoice
      * methode yang berguna untuk menampilkan nila totalprice
      */
     public abstract void printData();
+    public String toString()
+    {
+        return "";
+    }
     
        
     

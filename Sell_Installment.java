@@ -12,15 +12,16 @@ public class Sell_Installment extends Invoice
     private InvoiceStatus INVOICE_STATUS =InvoiceStatus.Installment;
     private int installmentPeriod;
     private int installmentPrice;
+    private Costumer costumer;
     /**
      * Constructor for objects of class Sell_Installment
      */
-    public Sell_Installment(int id,Item item, String date, 
-    int totalItem,int totalPrice)
+    public Sell_Installment(int id,Item item,
+    int totalItem,int installmentPeriod,Costumer costumer)
     {
-        super(id,item,date,totalPrice,totalItem);
+        super(id,item,totalItem);
         this.installmentPeriod=installmentPeriod;
-        this.installmentPrice=installmentPrice;
+        
     }
 
     public int getInstallmentPeriod()
@@ -43,7 +44,10 @@ public class Sell_Installment extends Invoice
     {
         return INVOICE_TYPE;
     }
-    
+    public Costumer getCostumer()
+    {
+        return costumer;
+    }
     public void setInstallmentPrice(int totalPrice)
     {
         installmentPrice =(int)(1.02* (totalPrice/installmentPeriod));
@@ -54,14 +58,25 @@ public class Sell_Installment extends Invoice
         int totalPrice=installmentPrice * installmentPeriod;
         super.setTotalPrice(totalPrice);
     }
-    
-    public void printData()
+    public void setCostumer(Costumer costumer)
     {
-        System.out.println("INVOICE");
-        System.out.println("ID :" + super.getId());
-        System.out.println("TANGGAL :" + super.getDate());
-        System.out.println("ITEM :" + super.getTotalItem());
-        System.out.println("Total Harga :" + super.getTotalPrice());
-        System.out.println("Status :" + super.getInvoiceStatus());
+        this.customer = customer;
     }
+    public void setInvoiceStatus(InvoiceStatus status)
+    {
+        
+    }
+    public String toString()
+    {
+        
+    }
+    // public void printData()
+    // {
+      //  System.out.println("INVOICE");
+      //  System.out.println("ID :" + super.getId());
+      //  System.out.println("TANGGAL :" + super.getDate());
+      //  System.out.println("ITEM :" + super.getTotalItem());
+      //  System.out.println("Total Harga :" + super.getTotalPrice());
+      //  System.out.println("Status :" + super.getInvoiceStatus());
+    // }
 }

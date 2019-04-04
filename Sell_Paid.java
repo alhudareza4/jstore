@@ -10,14 +10,14 @@ public class Sell_Paid extends Invoice
     // instance variables - replace the example below with your own
     private InvoiceType INVOICE_TYPE = InvoiceType.SELL;
     private InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
-
+    private Costumer costumer; 
     /**
      * Constructor for objects of class Sell_Paid
      */
-    public Sell_Paid(int id ,Item item, String date, int totalItem
-    ,int totalPrice)
+    public Sell_Paid(int id ,Item item,int totalItem
+    ,Costumer costumer)
     {
-        super(id,item,date,totalItem,totalPrice);
+        super(id,item,totalItem);
     }
 
     public InvoiceStatus getInvoiceStatus()
@@ -29,15 +29,26 @@ public class Sell_Paid extends Invoice
     {
         return INVOICE_TYPE;
     }
-    
-    public void printData()
+    public Costumer getCostumer()
     {
-        System.out.println("INVOICE");
-        System.out.println("ID :" + super.getId());
-        System.out.println("TANGGAL :" + super.getDate());
-        System.out.println("ITEM :" + super.getTotalItem());
-        System.out.println("Total Harga :" + super.getTotalPrice());
-        System.out.println("Status :" + super.getInvoiceStatus());
+        
     }
+    public String toString()
+    {
+        return "";
+    }
+    public void setInvoiceStatus(InvoiceStatus status)
+    {
+        
+    }
+    //public void printData()
+    //{
+     //   System.out.println("INVOICE");
+     //   System.out.println("ID :" + super.getId());
+     //   System.out.println("TANGGAL :" + super.getDate());
+     //   System.out.println("ITEM :" + super.getTotalItem());
+     //   System.out.println("Total Harga :" + super.getTotalPrice());
+     //   System.out.println("Status :" + super.getInvoiceStatus());
+    //}
     
 }

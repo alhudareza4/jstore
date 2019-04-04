@@ -29,8 +29,10 @@ public class jstore
         
          Item asus = new Item(1, "asus", 5, 5000,
         ItemStatus.New,ItemCategory.Electronic, supplier); 
+        
         Transaction transaksi = new Transaction();        
         transaksi.orderNewItem(asus);
+         DatabaseItem.addItem(asus);
         transaksi.sellItemPaid(asus);
         transaksi.sellItemUnpaid(asus);
         transaksi.sellItemInstallment(asus);// location.printData();
