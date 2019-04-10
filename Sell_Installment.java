@@ -1,4 +1,4 @@
-
+import java.text.*;
 /**
  * Write a description of class Sell_Installment here.
  *
@@ -8,11 +8,12 @@
 public class Sell_Installment extends Invoice
 {
     // instance variables - replace the example below with your own
-    private InvoiceType INVOICE_TYPE = InvoiceType.SELL;
-    private InvoiceStatus INVOICE_STATUS =InvoiceStatus.Installment;
+    private static final InvoiceType INVOICE_TYPE = InvoiceType.SELL;
+    private static final InvoiceStatus INVOICE_STATUS =InvoiceStatus.Installment;
     private int installmentPeriod;
     private int installmentPrice;
     private Costumer costumer;
+    private SimpleDateFormat dateFormat = new SimpleDateFormat (" dd MM yyy");
     /**
      * Constructor for objects of class Sell_Installment
      */
@@ -60,23 +61,29 @@ public class Sell_Installment extends Invoice
     }
     public void setCostumer(Costumer costumer)
     {
-        this.customer = customer;
+        this.costumer = costumer;
     }
     public void setInvoiceStatus(InvoiceStatus status)
     {
         
     }
+   
     public String toString()
     {
-        
-    }
-    // public void printData()
-    // {
-      //  System.out.println("INVOICE");
-      //  System.out.println("ID :" + super.getId());
-      //  System.out.println("TANGGAL :" + super.getDate());
-      //  System.out.println("ITEM :" + super.getTotalItem());
-      //  System.out.println("Total Harga :" + super.getTotalPrice());
-      //  System.out.println("Status :" + super.getInvoiceStatus());
-    // }
+        System.out.println("ID = " + super.getId());
+        System.out.println("Item = " + super.getItem().getName());
+        System.out.println("Amount = " + super.getTotalItem());
+        System.out.println("Buy date = " + dateFormat.format(super.getDate().getTime()));
+        System.out.println("Price = " + super.getItem().getPrice());
+        System.out.println("Price total = " + super.getTotalPrice());
+        System.out.println("Installment price = " + installmentPrice);
+        System.out.println("Supplier ID = " + super.getItem().getSupplier().getId());
+        System.out.println("Supplier name = " + super.getItem().getSupplier().getName());
+        System.out.println("Costumer ID = " + costumer.getId());
+        System.out.println("Costumer name = " + costumer.getName());
+        System.out.println("Status = " + INVOICE_STATUS);
+        System.out.println("Installment period = " + installmentPeriod);
+        System.out.println("Sell success.");
+        return "";
+     }
 }

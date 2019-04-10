@@ -1,4 +1,4 @@
-
+import java.text.*;
 /**
  * Write a description of class Sell_Paid here.
  *
@@ -8,9 +8,10 @@
 public class Sell_Paid extends Invoice
 {
     // instance variables - replace the example below with your own
-    private InvoiceType INVOICE_TYPE = InvoiceType.SELL;
-    private InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
+    private static final InvoiceType INVOICE_TYPE = InvoiceType.SELL;
+    private static final InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
     private Costumer costumer; 
+    private SimpleDateFormat dateFormat = new SimpleDateFormat ("dd MMM yyy");
     /**
      * Constructor for objects of class Sell_Paid
      */
@@ -22,24 +23,24 @@ public class Sell_Paid extends Invoice
 
     public InvoiceStatus getInvoiceStatus()
     {
-        return INVOICE_STATUS;
+        return this.INVOICE_STATUS;
     }
     
     public InvoiceType getInvoiceType()
     {
-        return INVOICE_TYPE;
+        return this.INVOICE_TYPE;
     }
     public Costumer getCostumer()
     {
-        
+        return costumer;
     }
     public String toString()
     {
         return "";
     }
-    public void setInvoiceStatus(InvoiceStatus status)
+    public void setCostumer(Costumer costumer)
     {
-        
+        this.costumer = costumer;
     }
     //public void printData()
     //{

@@ -1,4 +1,6 @@
 import java.util.*;
+import java.text.*;
+import java.util.regex.*; 
 /**
  * Write a description of class Costumer here.
  *
@@ -14,7 +16,7 @@ public class Costumer
     private String password;
     private int id;
     private Calendar birthDate;
-
+    private SimpleDateFormat dateFormat = new SimpleDateFormat ("dd MMM yyy");
     /**
      * Constructor for objects of class Costumer
      */
@@ -67,9 +69,11 @@ public class Costumer
     }
     public Calendar getBirthDate()
     {
-        System.out.println("Birth Date: " + birthDate.get(Calendar.DATE) + " " + 
-        birthDate.get(Calendar.MONTH) + " " +  birthDate.get(Calendar.YEAR));
-         return birthDate;
+        System.out.println("Birth date: " + dateFormat.format(birthDate.getTime()));
+        return birthDate;
+        //System.out.println("Birth Date: " + birthDate.get(Calendar.DATE) + " " + 
+        //birthDate.get(Calendar.MONTH) + " " +  birthDate.get(Calendar.YEAR));
+        //return birthDate;
         //SImpleDateFormat ft = new SimpleDateFormat("dd MMM YYY");
         //System.out.printf("Birth Date : " + ft.format(birthDate.getTime()));
         //return birthDate;
@@ -83,6 +87,17 @@ public class Costumer
     public void setEmail(String email)
     {
          this.email = email;
+         if(Pattern.matches("^[a-zA-Z0-9_+&*-]+(?:\\."+ 
+                            "[a-zA-Z0-9_+&*-]+)*@" + 
+                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" + 
+                            "A-Z]{2,7}$", email))
+        {
+            this.email = email;
+        }
+        else
+        {
+           this.email = "";
+        }
     }
     public void setUsername(String username)
     {
@@ -91,6 +106,14 @@ public class Costumer
     public void setPassword(String password)
     {
          this.password = password;
+         if(Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,}$", password))
+        {
+            this.password = password;
+        }
+        else
+        {
+            this.password = "";
+        }
     }
     public void setId(int id)
     {
@@ -102,9 +125,16 @@ public class Costumer
     }
     public void setBirthDate(int year,int month,int dayOfMonth)
     {
+        birthDate = new GregorianCalendar(year, (month-1), dayOfMonth);
     }
     public String toString()
     {
+        System.out.println("Name: " + name);
+        System.out.println("Email: " + email);
+        System.out.println("Username: " + username);
+        System.out.println("Password: " + password);
+        System.out.println("ID: " + id);
+        System.out.println("Birthdate: " + birthDate);
         return "";
     }
 }

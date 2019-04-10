@@ -19,8 +19,9 @@ public class DatabaseSupplier
     public DatabaseSupplier()
     {
         // initialise instance variables
-        this.supplier=supplier;
-        this.listSupplier=listSupplier;
+        
+        //this.supplier=supplier;
+        //this.listSupplier=listSupplier;
     }
 
    /**
@@ -29,7 +30,7 @@ public class DatabaseSupplier
      */
      public boolean Supplier()
     {
-       return true; 
+       return false; 
     }
     /**
      * methode yang berguna untuk menset nilai supplier
@@ -43,10 +44,10 @@ public class DatabaseSupplier
     /**
      * methode yang berguna untuk mengambil nilai item pada database
      */
-    public void getItemDatabase()
-    {
-        this.supplier=supplier;
-    }
+    //public void getItemDatabase()
+    //{
+      //  this.supplier=supplier;
+    //}
     /**
      * methode yang berguna untuk mengambil supplier
      */
@@ -64,7 +65,7 @@ public class DatabaseSupplier
     }
     static public boolean addSupplier()
     {
-       return true; 
+      return true; 
     }
     
 }

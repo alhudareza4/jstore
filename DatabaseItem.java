@@ -31,7 +31,7 @@ public class DatabaseItem
     {
         //return Item;
         itemDB = item;
-        return true;
+        return false;
     }
     /**
      * methode yang berguna untuk mengambil nilai supplie
@@ -41,7 +41,7 @@ public class DatabaseItem
     public boolean removeItem(Item item)
     {
         // put your code here
-        return true;
+        return false;
     }
     /**
      * methode yang berguna untuk mengambil nilai itemdatabase

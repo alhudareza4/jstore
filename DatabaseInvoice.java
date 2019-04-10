@@ -7,7 +7,9 @@
  */
 public class DatabaseInvoice
 {
-    private Costumer[] listInvoice;
+    //private Costumer[] listInvoice;
+    private Invoice[] listInvoice;
+    private Invoice invoice;
     /**
      * Constructor for objects of class DatabaseInvoice
      */
@@ -19,7 +21,7 @@ public class DatabaseInvoice
 
     public boolean addInvoice(Invoice invoice)
     {
-        return true;
+        return false;
     }
     public void removeInvoice(Invoice invoice)
     {
@@ -27,7 +29,7 @@ public class DatabaseInvoice
     }
     public Invoice getInvoice()
     {
-        
+        return invoice;
     }
     
     public Invoice[] getListInvoice()

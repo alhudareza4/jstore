@@ -56,7 +56,7 @@ public class Location
      */
     public void setProvince(String province)
     {
-        
+        this.province=province;
     }
     /**
      * methode yang berguna untuk menset nilai city
@@ -64,7 +64,7 @@ public class Location
      */
     public void setCity(String city)
     {
-        
+        this.city=city;
     }
     /**
      * methode yang berguna untuk menset nilai description
@@ -72,17 +72,18 @@ public class Location
      */
     public void setDescription(String description)
     {
-        
+        this.description=description;
     }
     /**
      * methode yang berguna untuk menampilkan nilai province
      */
-    public void printData()
+    public String toString()
     {
         System.out.println("LOCATION");
         System.out.println("PROVINSI" + province);
         System.out.println("KOTA" + city);
         System.out.println("Deskripsi" + description);
+        return "";
         
     }
 }

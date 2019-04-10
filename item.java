@@ -31,6 +31,7 @@ public class Item
         this.stock=stock;
         this.price=price;
         this.category=category;
+        this.status=status;
         this.supplier=supplier;
        
     }
@@ -146,7 +147,7 @@ public class Item
     /**
      * berguna untuk menampilkan data name
      */
-    public void printData()
+    public String toString()
     {
         System.out.println("ITEM");
         System.out.println("ID" + id);
@@ -154,7 +155,7 @@ public class Item
         System.out.println("kategory"+ category);
         System.out.println("Status"+ status);
         System.out.println("Supplier" + supplier);
-       
+        return "";
         
     }
     

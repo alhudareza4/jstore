@@ -11,6 +11,7 @@
  * @version 28 febuari 2019
  */
 import java.util.*;
+import java.text.*;
 public abstract class Invoice
 {
     // instance variables - replace the example below with your own
@@ -19,8 +20,8 @@ public abstract class Invoice
     protected int totalPrice;
     private Item Item;
     private int totalItem;
-    private InvoiceStatus status;
-    private InvoiceType type;
+    //private InvoiceStatus status;
+    // //private InvoiceType type;
     
     
 
@@ -79,14 +80,9 @@ public abstract class Invoice
     }
     
     
-    public InvoiceStatus getInvoiceStatus()
-    {
-        return status;
-    }
-    public InvoiceType getInvoicetype()
-    {
-        return type;
-    }
+    public abstract InvoiceStatus getInvoiceStatus();
+    public abstract InvoiceType getInvoiceType();
+    /*public abstract void setInvoiceStatus(InvoiceStatus status);
     /**
      * methode yang berguna untuk menset nilai id
      * @param parameter yang digunakan pada method ini adalah id yang menggunakan tipe data integer
@@ -126,18 +122,13 @@ public abstract class Invoice
     {
         this.totalItem=totalItem;
     }
-     public void setInvoiceStatus(InvoiceStatus status)
-    {
-        this.status=status;
-    }
+    
     /**
      * methode yang berguna untuk menampilkan nila totalprice
      */
-    public abstract void printData();
-    public String toString()
-    {
-        return "";
-    }
+    
+    public abstract String toString();
+    
     
        
     

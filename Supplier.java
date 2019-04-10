@@ -129,7 +129,7 @@ public class Supplier
         //memasukan nilai dari variabel local location kevariabel global
         this.location=location;
     }
-    public void printData()
+    public String toString()
     {
         //menampilkan variabel name
         System.out.println("SUPPLIER");
@@ -138,5 +138,6 @@ public class Supplier
         System.out.println("EMAIL" + email);
         System.out.println("NOMOR TELFON" + phoneNumber);
         System.out.println("Lokasi" + location.getCity());
+        return "";
     }
 }

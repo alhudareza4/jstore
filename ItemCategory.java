@@ -7,9 +7,8 @@
  */
 public enum ItemCategory
 {
-    Electronic,
-    Stationery,
-    Furniture
+    Electronic,Stationery,Furniture;
+   
 }
 
 
