@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=DatabaseSupplier
+comment0.text=\r\n\ class\ databasesupplier\ berguna\ untuk\ mendapatkan\ dan\ menset\ data\ supplier\ dari\r\n\ setiap\ toko.yang\ membedakan\ class\ ini\ dengan\ class\ yang\ lain\ \r\n\ adalah\ adanya\ variable\ listsupplier\ dan\ supplier\r\n\r\n\ @author\ Alhuda\ Reza\ Mahara\r\n\ @version\ 28-febuari-2019\r\n
+comment1.params=
+comment1.target=DatabaseSupplier()
+comment1.text=\r\n\ Constructor\ yang\ digunakan\ pada\ class\ invoice\ berguna\ untuk\ mengassign\ nilai\ variabel\ local\ ke\ variabel\ global\r\n
+comment2.params=
+comment2.target=boolean\ Supplier()
+comment2.text=\r\n\ methode\ yang\ berguna\ untuk\ mengambil\ nilai\ supplier\r\n\ @return\ dimana\ nilai\ yang\ sudah\ diambil\ tersebut\ direturn\ ke\ variabel\ \ supplier\ dan\ menggunakan\ tipe\ data\ boolean\r\n
+comment3.params=supplier
+comment3.target=void\ removeSupplier(Supplier)
+comment3.text=\r\n\ methode\ yang\ berguna\ untuk\ menset\ nilai\ supplier\r\n\ @param\ parameter\ yang\ digunakan\ pada\ method\ ini\ adalah\ supplier\ \r\n
+comment4.params=
+comment4.target=Supplier\ getSupplier()
+comment4.text=\r\n\ methode\ yang\ berguna\ untuk\ mengambil\ supplier\r\n
+comment5.params=
+comment5.target=Supplier[]\ getListSupplier()
+comment5.text=\r\n\ methode\ yang\ berguna\ untuk\ mengambil\ nilai\ listsupplier\r\n\ @return\ dimana\ nilai\ yang\ sudah\ diambil\ tersebut\ direturn\ ke\ listsupplier\ \ supplier\ dan\ menggunakan\ tipe\ data\ String[]\r\n
+comment6.params=
+comment6.target=boolean\ addSupplier()
+numComments=7
