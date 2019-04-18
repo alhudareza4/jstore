@@ -86,8 +86,8 @@ public class Sell_Installment extends Invoice
         System.out.println("Buy date = " + dateFormat.format(super.getDate().getTime()));
         System.out.println("Price total = " + super.getTotalPrice());
         System.out.println("Installment price = " + installmentPrice);
-        System.out.println("Customer ID = " + costumer.getId());
-        System.out.println("Customer name = " + costumer.getName());
+        //System.out.println("Customer ID = " + costumer.getId());
+        //System.out.println("Customer name = " + costumer.getName());
         System.out.println("Status = " + INVOICE_STATUS);
         System.out.println("Installment period = " + installmentPeriod);
         System.out.println("Sell success.");

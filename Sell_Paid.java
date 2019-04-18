@@ -60,8 +60,8 @@ public class Sell_Paid extends Invoice
         }
         System.out.println("Buy date = " + dateFormat.format(super.getDate().getTime()));
         System.out.println("Price total = " + super.getTotalPrice());
-        System.out.println("Customer ID = " + costumer.getId());
-        System.out.println("Customer name = " + costumer.getName());
+        //System.out.println("Customer ID = " + costumer.getId());
+        //System.out.println("Customer name = " + costumer.getName());
         System.out.println("Status = " + this.getInvoiceStatus());
         System.out.println("Sell success.");
         return "";

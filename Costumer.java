@@ -21,19 +21,20 @@ public class Costumer
      * Constructor for objects of class Costumer
      */
     public Costumer(String name,String email,String username,
-    String password,int id, Calendar birthDate)
+    String password, Calendar birthDate)
     {
         // initialise instance variables
-          this.name = name;
+        this.name = name;
         this.email = email;
         this.username = username;
         this.password = password;
         this.id = DatabaseCostumer.getLastCustomerID() + 1;
         this.birthDate = birthDate;
+        
     }
 
     public Costumer(String name,String email,String username,
-    String password,int id,int year,int month,int dayOfMonth)
+    String password,int year,int month,int dayOfMonth)
     {
      this.name = name;
      this.email = email;
@@ -69,9 +70,13 @@ public class Costumer
     }
     public Calendar getBirthDate()
     {
-        System.out.println("Birth date: " + dateFormat.format(birthDate.getTime()));
+        //System.out.println("Birth date: " + dateFormat.format(birthDate.getTime()));
+        //return birthDate;
+        System.out.printf("%s %te %<tB %<tY", "Birth date: ", birthDate);
+        System.out.println(" ");
+        SimpleDateFormat format = new SimpleDateFormat("dd MMMM yyyy");
+        System.out.println("Birth date: " + format.format(birthDate.getTime()));
         return birthDate;
-        
     }
     
     public void setName(String name)
@@ -129,7 +134,7 @@ public class Costumer
         System.out.println("Username: " + username);
         System.out.println("Password: " + password);
         System.out.println("ID: " + id);
-        System.out.println("Birthdate: " + birthDate);
+        System.out.println("Birthdate: " + birthDate.getTime());
         return "";
     }
 }

@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Item
 comment0.text=\r\n.\ *\ kelas\ supplier\ ini\ berfungsi\ untuk\ menset\ dan\ mendapatkan\ nilai\r\n\ Item\ dari\ setiap\ barang\ dengan\ yang\ membedakan\ dari\ kelas\ \r\n\ yang\ lain\ adalah\ adanya\ variable\ id,name\ ,stock,price\ dan\ category\r\n\ @author\ Alhuda\ Reza\ Mahara\r\n\ @version\ 28-febuari-2019\r\n
-comment1.params=id\ name\ stock\ price\ status\ category\ supplier
-comment1.target=Item(int,\ java.lang.String,\ int,\ int,\ ItemStatus,\ ItemCategory,\ Supplier)
+comment1.params=name\ stock\ price\ status\ category\ supplier
+comment1.target=Item(java.lang.String,\ int,\ int,\ ItemStatus,\ ItemCategory,\ Supplier)
 comment1.text=\r\n\ @param\ parameter\ yang\ digunakan\ adalah\ id,\ name,\ stock,\ price,\ category,\ supplier\r\n\ Constructor\ yang\ digunakan\ pada\ class\ supplier\ berguna\ untuk\ mengassign\ nilai\ variabel\ local\ ke\ variabel\ global\r\n
 comment10.params=name
 comment10.target=void\ setName(java.lang.String)

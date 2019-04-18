@@ -21,48 +21,48 @@ public class Transaction
     }
 
     
-    public void orderNewItem(Item item)
+    public void orderNewItem(ArrayList<Integer> item_list)
     {
-       listItem.add(item.getId());
+       //listItem.add(item.getId());
         Invoice order = new Buy_Paid(listItem);
         DatabaseInvoice.addInvoice(order);
     }
     
     
-    public void orderSecondItem(Item item)
+    public void orderSecondItem(ArrayList<Integer> item_list)
     {
-         listItem.add(item.getId());
+        //listItem.add(item.getId());
         Invoice order = new Buy_Paid(listItem);
         DatabaseInvoice.addInvoice(order);
 
     }
     
-    public void orderRefurbishedItem(Item item)
+    public void orderRefurbishedItem(ArrayList<Integer> item_list)
     {
-         listItem.add(item.getId());
+        //listItem.add(item.getId());
         Invoice order = new Buy_Paid(listItem);
         DatabaseInvoice.addInvoice(order);
     }
     
-     public void sellItemPaid(Item item,Costumer costumer)
+     public void sellItemPaid(ArrayList<Integer> item_list,Costumer costumer)
     {
-        listItem.add(item.getId());
+        //listItem.add(item.getId());
         Invoice sellPaid = new Sell_Paid(listItem, costumer);
         DatabaseInvoice.addInvoice(sellPaid);
     }
     
  
-    public void sellItemUnpaid(Item item,Costumer costumer)
+    public void sellItemUnpaid(ArrayList<Integer> item_list,Costumer costumer)
     {
-           listItem.add(item.getId());
+        //listItem.add(item.getId());
         Invoice sellUnpaid = new Sell_Unpaid(listItem, costumer);
         DatabaseInvoice.addInvoice(sellUnpaid);
     }
     
-    public void sellItemInstallment(Item item,Costumer costumer,int
+    public void sellItemInstallment(ArrayList<Integer> item_list,Costumer costumer,int
     installmentPeriod)
     {
-        listItem.add(item.getId());
+        //listItem.add(item.getId());
         Invoice sellInstall = new Sell_Installment(listItem, installmentPeriod, costumer);
         DatabaseInvoice.addInvoice(sellInstall);
     }
@@ -73,9 +73,15 @@ public class Transaction
         {
             return false;
         }
-        invoice.setIsActive(false);
-        System.out.println("isActive : " + invoice.getIsActive());
-        return true;
+        if(invoice.getInvoiceStatus() == InvoiceStatus.Unpaid
+                || invoice.getInvoiceStatus() == InvoiceStatus.Installment)
+        {
+            invoice.setIsActive(false);
+            invoice.toString();
+            System.out.println("isActive : " + invoice.getIsActive());
+            return true;
+        }
+        return false;
     }
     public static boolean cancelTransaction(Invoice invoice)
     {

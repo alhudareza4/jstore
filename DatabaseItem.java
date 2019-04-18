@@ -1,4 +1,5 @@
 import java.util.*;
+import java.text.*;
 /**
  * class databaseitem berguna untuk mendapatkan dan menset database item dari
  * setiap toko.yang membedakan class ini dengan class yang lain 
@@ -33,22 +34,22 @@ public class DatabaseItem
    /**
      * methode yang berguna untuk menset nilai item
      * @return dimana nilai yang sudah diambil tersebut direturn ke variabel item
-     * @param parameter yang digunakan pada method ini adalah item 
+     * yang digunakan pada method ini adalah item
      */
-    public boolean addItem(Item item)
+    public static boolean addItem(Item itemthrows)throws ItemAlreadyExistsException
     {
-        boolean found = false;
-        for(Item temp : ITEM_DATABASE) 
+        for(Item temp : ITEM_DATABASE)
         {
-            if(temp.getName() == item.getName() && temp.getStatus() == item.getStatus()
-            && temp.getSupplier() == item.getSupplier()) 
+            if(temp.getName() == item.getName() &&
+                    temp.getStatus() == item.getStatus()
+                    && temp.getSupplier() == item.getSupplier() &&
+                    temp.getCategory() == item.getCategory())
             {
-                return false;
+                throw new ItemAlreadyExistsException(item);
             }
         }
         ITEM_DATABASE.add(item);
         LAST_ITEM_ID = item.getId();
-       
         return true;
     }
     /**
@@ -56,17 +57,17 @@ public class DatabaseItem
      * @return dimana nilai yang sudah diambil tersebut direturn ke variabel  supplier dan menggunakan tipe data boolean
      * @param parameter yang digunakan pada method ini adalah item 
      */
-    public static boolean removeItem(int id)
+    public static boolean removeItem(int id)throws ItemNotFoundException
     {
-        for(Item temp : ITEM_DATABASE) 
+        for(Item temp : ITEM_DATABASE)
         {
-            if(temp.getId() == id) 
+            if(temp.getId() == id)
             {
                 ITEM_DATABASE.remove(temp);
                 return true;
             }
         }
-        return false;
+        throw new ItemNotFoundException(id);
     }
     /**
      * methode yang berguna untuk mengambil nilai itemdatabase

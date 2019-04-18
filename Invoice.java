@@ -27,7 +27,7 @@ public abstract class Invoice
     
 
     /**
-     * @param parameter yang digunakan adalah id, Item, date dan totalprice
+     * yang digunakan adalah id, Item, date dan totalprice
      * Constructor yang digunakan pada class invoice berguna untuk mengassign nilai variabel local ke variabel global
      */
      public Invoice(ArrayList<Integer> item)
@@ -104,7 +104,7 @@ public abstract class Invoice
     }
     /**
      * methode yang berguna untuk menset nilai date
-     * @param parameter yang digunakan pada method ini adalah date yang menggunakan tipe data String
+     *  yang digunakan pada method ini adalah date yang menggunakan tipe data String
      */
     public void setDate(Calendar date)
     {
@@ -113,7 +113,7 @@ public abstract class Invoice
     }
     /**
      * methode yang berguna untuk menset nilai totalPrice
-     * @param parameter yang digunakan pada method ini adalah totalPrice yang menggunakan tipe data String
+     *  yang digunakan pada method ini adalah totalPrice yang menggunakan tipe data String
      */
     public void setTotalPrice(int totalPrice)
     {
@@ -125,7 +125,7 @@ public abstract class Invoice
     }
     /**
      * methode yang berguna untuk menset nilai Item
-     * @param parameter yang digunakan pada method ini adalah Item 
+     *  yang digunakan pada method ini adalah Item
      */
     public void setItem(ArrayList<Integer> item)
     {
