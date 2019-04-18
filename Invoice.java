@@ -1,8 +1,4 @@
 
-
-
-
-
 /**
  * kelas invoice ini berfungsi untuk menset dan mendapatkan 
  * invoice dari setiap barang dengan yang membedakan dari kelas 

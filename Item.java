@@ -9,8 +9,6 @@
 public class Item
 {
     // instance variables - replace the example below with your own
-    
-        
     private int id;
     private String name;
     private int stock;
@@ -23,7 +21,7 @@ public class Item
      * @param parameter yang digunakan adalah id, name, stock, price, category, supplier
      * Constructor yang digunakan pada class supplier berguna untuk mengassign nilai variabel local ke variabel global
      */
-    public Item(int id,String name, int stock, int price,ItemStatus status,
+    public Item(String name, int stock, int price,ItemStatus status,
     ItemCategory category, Supplier supplier)
     {
         this.id=DatabaseItem.getLastItemID() + 1;

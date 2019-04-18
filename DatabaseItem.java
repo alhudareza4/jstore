@@ -35,7 +35,7 @@ public class DatabaseItem
      * @return dimana nilai yang sudah diambil tersebut direturn ke variabel item
      * @param parameter yang digunakan pada method ini adalah item 
      */
-    public boolean addItem(Item item)
+    public static boolean addItem(Item item)
     {
         boolean found = false;
         for(Item temp : ITEM_DATABASE) 

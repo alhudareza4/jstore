@@ -26,7 +26,7 @@ public class DatabaseCostumer
     }
     public static int getLastCustomerID()
     {
-        return LAST_CUSTOMER_ID;
+        return LAST_CUSTOMER_ID++;
     }
     public static boolean addCustomer(Costumer costumer)
     {

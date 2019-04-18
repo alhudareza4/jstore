@@ -22,12 +22,12 @@ public class Supplier
      * @param parameter yang digunakan adalah id, name, email, phone number dan location
      * Constructor yang digunakan pada class supplier
      */
-    public Supplier(int id, String name, String email,String phoneNumber,
+    public Supplier( String name, String email,String phoneNumber,
     Location location)
     {
         // initialise instance variables
         //id = 0;
-        this.id=id;
+        this.id=DatabaseSupplier.getLastSupplierID()+1;
         this.name=name;
         this.email=email;
         this.phoneNumber=phoneNumber;

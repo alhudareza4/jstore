@@ -42,7 +42,7 @@ public class DatabaseSupplier
             }
         }
         SUPPLIER_DATABASE.add(supplier);
-        LAST_SUPPLIER_ID = supplier.getId();
+        LAST_SUPPLIER_ID++;
         return true;
     }
     public static Supplier getSupplier(int id)

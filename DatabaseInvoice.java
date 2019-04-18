@@ -45,8 +45,13 @@ public class DatabaseInvoice
      */
     public static boolean addInvoice(Invoice invoice)
     {
-        INVOICE_DATABASE.add(invoice);
-        return true;
+        for(Invoice temp : INVOICE_DATABASE)
+        {
+            if((temp.getItem() == invoice.getItem()) ||
+                    (temp.getCustomer() == invoice.getCustomer()))
+            {
+                return false;
+            }
     }
     
     /**
@@ -71,18 +76,27 @@ public class DatabaseInvoice
      *
      * @return    objek supplier
      */
-    public static Invoice getActiveOrder(Costumer costumer)
+    public static ArrayList<Invoice> getActiveOrder(Costumer costumer)
     {
-        for(Invoice temp : INVOICE_DATABASE) 
+        ArrayList<Invoice> list = new ArrayList<Invoice>();
+        boolean found = false;
+        for(Invoice temp : INVOICE_DATABASE)
         {
-            if((temp.getInvoiceStatus() == InvoiceStatus.Unpaid || 
-            temp.getInvoiceStatus() == InvoiceStatus.Installment) && 
-            temp.getIsActive() == true) 
+            if(temp.getCustomer() == customer &&
+                    temp.getIsActive() == true)
             {
-                return temp;
+                list.add(temp);
+                found = true;
             }
         }
-        return null;
+        if(found)
+        {
+            return list;
+        }
+        else
+        {
+            return null;
+        }
     }
         
     /**
